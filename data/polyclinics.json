@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "Poliklinik Umum" },
+  { "id": 2, "name": "Poliklinik Gigi" },
+  { "id": 3, "name": "Poliklinik Anak" },
+  { "id": 4, "name": "Poliklinik Penyakit Dalam" },
+  { "id": 5, "name": "Poliklinik Bedah" },
+  { "id": 6, "name": "Poliklinik Mata" },
+  { "id": 7, "name": "Poliklinik THT" },
+  { "id": 8, "name": "Poliklinik Kulit & Kelamin" },
+  { "id": 9, "name": "Poliklinik Saraf" },
+  { "id": 10, "name": "Poliklinik Jantung" },
+  { "id": 11, "name": "Poliklinik Paru" },
+  { "id": 12, "name": "Poliklinik Kandungan" },
+  { "id": 13, "name": "Poliklinik Ortopedi" },
+  { "id": 14, "name": "Poliklinik Urologi" },
+  { "id": 15, "name": "Rehabilitasi Medik" }
+]

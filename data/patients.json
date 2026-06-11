@@ -1,0 +1,5 @@
+[
+  { "rm_id": "123456", "nik": "1234567890123456", "dob": "01-01-1990", "full_name": "Budi Santoso", "insurance_type": "UMUM" },
+  { "rm_id": "234567", "nik": "9876543210987654", "dob": "15-05-1985", "full_name": "Siti Aminah", "insurance_type": "BPJS" },
+  { "rm_id": "345678", "nik": "1122334455667788", "dob": "20-10-2000", "full_name": "Andi Darmawan", "insurance_type": "ASURANSI" }
+]

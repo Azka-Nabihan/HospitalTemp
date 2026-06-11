@@ -1,0 +1,8 @@
+[
+  { "class": "Kelas III", "price": 150000 },
+  { "class": "Kelas II", "price": 250000 },
+  { "class": "Kelas I", "price": 400000 },
+  { "class": "VIP", "price": 750000 },
+  { "class": "VVIP", "price": 1200000 },
+  { "class": "President Suite", "price": 2500000 }
+]

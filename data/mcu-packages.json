@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Paket Basic", "price": 450000, "description": "Pemeriksaan fisik, darah rutin, urine rutin, rontgen thorax." },
+  { "id": 2, "name": "Paket Medium", "price": 850000, "description": "Paket Basic + EKG, gula darah puasa, profil lipid." },
+  { "id": 3, "name": "Paket Executive", "price": 1500000, "description": "Paket Medium + USG Abdomen, fungsi hati, fungsi ginjal, treadmill test." }
+]

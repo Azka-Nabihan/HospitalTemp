@@ -1,0 +1,8 @@
+[
+  { "id": 1, "poly_id": 1, "name": "dr. Andi", "specialist": "Dokter Umum" },
+  { "id": 2, "poly_id": 1, "name": "dr. Budi", "specialist": "Dokter Umum" },
+  { "id": 3, "poly_id": 2, "name": "drg. Arya", "specialist": "Dokter Gigi" },
+  { "id": 4, "poly_id": 2, "name": "drg. Citra", "specialist": "Dokter Gigi" },
+  { "id": 5, "poly_id": 3, "name": "dr. Diana, Sp.A", "specialist": "Spesialis Anak" },
+  { "id": 6, "poly_id": 4, "name": "dr. Eka, Sp.PD", "specialist": "Spesialis Penyakit Dalam" }
+]

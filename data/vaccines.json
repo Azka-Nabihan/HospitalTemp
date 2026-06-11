@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "Vaksin Influenza", "price": 250000, "schedule": "Senin - Jumat, 08:00 - 14:00" },
+  { "id": 2, "name": "Vaksin HPV", "price": 950000, "schedule": "Senin - Sabtu, 09:00 - 12:00" }
+]
