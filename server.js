@@ -45,6 +45,6 @@ app.use('/api/v1/doctors', doctorRoutes);
 // Info routes will cover polyclinics, visiting hours, tariffs, promos, vaccines, mcu
 app.use('/api/v1', infoRoutes); 
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
 });
