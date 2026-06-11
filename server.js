@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const { checkApiStatus, setApiStatus } = require('./middleware/apiStatus');
+const { checkApiKey } = require('./middleware/auth');
 
 const patientRoutes = require('./routes/patients');
 const bookingRoutes = require('./routes/bookings');
@@ -33,6 +34,9 @@ app.get('/api/v1/health', (req, res) => {
 
 // Apply global middleware for SIMRS API offline simulation
 app.use('/api/v1', checkApiStatus);
+
+// Apply API Key Authentication middleware
+app.use('/api/v1', checkApiKey);
 
 // Register routes
 app.use('/api/v1/patients', patientRoutes);
