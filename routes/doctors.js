@@ -38,10 +38,13 @@ router.get('/availability', (req, res) => {
             is_full: schedule.is_full,
             quota_total: schedule.quota_total,
             quota_remaining: schedule.quota_remaining,
-            schedule: schedule.schedule
+            schedule: schedule.schedule,
+            practice_days: schedule.practice_days || []
         });
     } else {
         // Default not available if no schedule
+        // Look up practice_days from any existing schedule for this doctor
+        var doctorSchedule = schedules.find(s => s.doctor_id == doctor_id);
         res.json({
             doctor_id: parseInt(doctor_id),
             name: doctor.name,
@@ -52,7 +55,8 @@ router.get('/availability', (req, res) => {
             is_full: false,
             quota_total: 0,
             quota_remaining: 0,
-            schedule: "Tidak ada jadwal"
+            schedule: "Tidak ada jadwal",
+            practice_days: doctorSchedule ? doctorSchedule.practice_days || [] : []
         });
     }
 });

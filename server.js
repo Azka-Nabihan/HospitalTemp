@@ -19,12 +19,12 @@ app.use(express.json());
 // Toggle API Status Endpoint (for testing)
 // This is not protected by checkApiStatus so we can turn it back on!
 app.post('/api/v1/admin/toggle-api', (req, res) => {
-    const { status } = req.body;
-    if (typeof status !== 'boolean') {
-        return res.status(400).json({ error: "status must be a boolean" });
+    const { isAvailable } = req.body;
+    if (typeof isAvailable !== 'boolean') {
+        return res.status(400).json({ error: "isAvailable must be a boolean" });
     }
-    setApiStatus(status);
-    res.json({ success: true, message: `API status set to ${status ? 'ONLINE' : 'OFFLINE'}` });
+    setApiStatus(isAvailable);
+    res.json({ success: true, message: `API status set to ${isAvailable ? 'ONLINE' : 'OFFLINE'}` });
 });
 
 // Health check

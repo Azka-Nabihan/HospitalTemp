@@ -1,5 +1,53 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
+const path = require('path');
+
+const bookingsFilePath = path.join(__dirname, '../data/bookings.json');
+
+// Helper: Read bookings from JSON file
+function readBookings() {
+    const raw = fs.readFileSync(bookingsFilePath, 'utf-8');
+    return JSON.parse(raw);
+}
+
+// Helper: Write bookings to JSON file
+function writeBookings(bookings) {
+    fs.writeFileSync(bookingsFilePath, JSON.stringify(bookings, null, 2), 'utf-8');
+}
+
+// GET /api/v1/bookings
+// List all bookings (Admin)
+router.get('/', (req, res) => {
+    const bookings = readBookings();
+    res.json({
+        success: true,
+        count: bookings.length,
+        data: bookings
+    });
+});
+
+// GET /api/v1/bookings/verify
+// Verify a booking by booking_code
+router.get('/verify', (req, res) => {
+    const { booking_code } = req.query;
+
+    if (!booking_code) {
+        return res.status(400).json({ success: false, message: "booking_code is required" });
+    }
+
+    const bookings = readBookings();
+    const booking = bookings.find(b => b.booking_code === booking_code);
+
+    if (booking) {
+        return res.json({
+            found: true,
+            booking: booking
+        });
+    }
+
+    res.status(404).json({ found: false, message: "Kode booking tidak ditemukan" });
+});
 
 // POST /api/v1/bookings
 router.post('/', (req, res) => {
@@ -14,6 +62,21 @@ router.post('/', (req, res) => {
     const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     const randomSeq = Math.floor(100 + Math.random() * 900).toString();
     const bookingCode = `BK-${dateStr}-${randomSeq}`;
+
+    // Build booking record
+    const bookingRecord = {
+        booking_code: bookingCode,
+        patient_name: full_name || "Pasien Lama",
+        insurance: insurance_type,
+        poly_id,
+        doctor_id,
+        created_at: new Date().toISOString()
+    };
+
+    // Persist to bookings.json
+    const bookings = readBookings();
+    bookings.push(bookingRecord);
+    writeBookings(bookings);
 
     res.json({
         success: true,
