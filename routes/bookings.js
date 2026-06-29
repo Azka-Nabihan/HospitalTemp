@@ -122,4 +122,28 @@ router.post('/reschedule', (req, res) => {
     });
 });
 
+// POST /api/v1/bookings/cancel
+router.post('/cancel', (req, res) => {
+    const { booking_code } = req.body;
+
+    if (!booking_code) {
+        return res.status(400).json({ success: false, message: "booking_code is required" });
+    }
+
+    const bookings = readBookings();
+    const booking = bookings.find(b => b.booking_code === booking_code);
+
+    if (!booking) {
+        return res.status(404).json({ success: false, message: "Kode booking tidak ditemukan" });
+    }
+
+    const updatedBookings = bookings.filter(b => b.booking_code !== booking_code);
+    writeBookings(updatedBookings);
+
+    res.status(200).json({
+        success: true,
+        message: "Pendaftaran berhasil dibatalkan"
+    });
+});
+
 module.exports = router;
