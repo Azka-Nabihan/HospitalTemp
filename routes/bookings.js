@@ -51,7 +51,7 @@ router.get('/verify', (req, res) => {
 
 // POST /api/v1/bookings
 router.post('/', (req, res) => {
-    const { patient_type, insurance_type, rm_id, nik, full_name, dob, poly_id, doctor_id } = req.body;
+    const { patient_type, insurance_type, rm_id, nik, full_name, dob, poly_id, doctor_id, date, time } = req.body;
 
     // Simulate validation
     if (!patient_type || !insurance_type || !poly_id || !doctor_id) {
@@ -70,6 +70,8 @@ router.post('/', (req, res) => {
         insurance: insurance_type,
         poly_id,
         doctor_id,
+        date: date || null,
+        time: time || null,
         created_at: new Date().toISOString()
     };
 
@@ -86,8 +88,37 @@ router.post('/', (req, res) => {
             patient_name: full_name || "Pasien Lama",
             insurance: insurance_type,
             poly_id,
-            doctor_id
+            doctor_id,
+            date: date || null,
+            time: time || null
         }
+    });
+});
+
+// POST /api/v1/bookings/reschedule
+router.post('/reschedule', (req, res) => {
+    const { booking_code, new_date, new_time } = req.body;
+
+    if (!booking_code || !new_date || !new_time) {
+        return res.status(400).json({ success: false, message: "booking_code, new_date, and new_time are required" });
+    }
+
+    const bookings = readBookings();
+    const booking = bookings.find(b => b.booking_code === booking_code);
+
+    if (!booking) {
+        return res.status(404).json({ success: false, message: "Kode booking tidak ditemukan" });
+    }
+
+    booking.date = new_date;
+    booking.time = new_time;
+
+    writeBookings(bookings);
+
+    res.status(200).json({
+        success: true,
+        message: "Jadwal berhasil diubah",
+        booking: booking
     });
 });
 
