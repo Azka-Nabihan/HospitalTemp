@@ -198,9 +198,9 @@
     "date": "2026-07-06",
     "is_available": true,
     "is_leave": false,
-    "is_full": false,
+    "is_full": true,
     "quota_total": 20,
-    "quota_remaining": 20,
+    "quota_remaining": 0,
     "schedule": "13:00 - 17:00",
     "practice_days": [
       "Senin",
@@ -211,12 +211,12 @@
   {
     "doctor_id": 4,
     "date": "2026-07-06",
-    "is_available": true,
-    "is_leave": false,
+    "is_available": false,
+    "is_leave": true,
     "is_full": false,
-    "quota_total": 15,
-    "quota_remaining": 15,
-    "schedule": "09:00 - 12:00",
+    "quota_total": 0,
+    "quota_remaining": 0,
+    "schedule": "Cuti",
     "practice_days": [
       "Senin",
       "Rabu"
