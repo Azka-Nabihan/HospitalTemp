@@ -1,10 +1,627 @@
 [
-  { "doctor_id": 1, "date": "2026-06-11", "is_available": true, "is_leave": false, "is_full": false, "quota_total": 20, "quota_remaining": 15, "schedule": "08:00 - 12:00", "practice_days": ["Senin", "Rabu", "Jumat"] },
-  { "doctor_id": 2, "date": "2026-06-11", "is_available": true, "is_leave": false, "is_full": true, "quota_total": 20, "quota_remaining": 0, "schedule": "13:00 - 17:00", "practice_days": ["Senin", "Selasa", "Kamis"] },
-  { "doctor_id": 3, "date": "2026-06-11", "is_available": true, "is_leave": false, "is_full": false, "quota_total": 15, "quota_remaining": 5, "schedule": "14:00 - 17:00", "practice_days": ["Selasa", "Kamis", "Sabtu"] },
-  { "doctor_id": 4, "date": "2026-06-11", "is_available": false, "is_leave": true, "is_full": false, "quota_total": 0, "quota_remaining": 0, "schedule": "Cuti", "practice_days": ["Senin", "Rabu"] },
-  { "doctor_id": 5, "date": "2026-06-11", "is_available": true, "is_leave": false, "is_full": false, "quota_total": 25, "quota_remaining": 10, "schedule": "09:00 - 13:00", "practice_days": ["Senin", "Rabu", "Jumat"] },
-  { "doctor_id": 6, "date": "2026-06-11", "is_available": true, "is_leave": false, "is_full": false, "quota_total": 20, "quota_remaining": 2, "schedule": "10:00 - 14:00", "practice_days": ["Selasa", "Kamis", "Sabtu"] },
-  { "doctor_id": 1, "date": "2026-06-12", "is_available": true, "is_leave": false, "is_full": false, "quota_total": 20, "quota_remaining": 20, "schedule": "08:00 - 12:00", "practice_days": ["Senin", "Rabu", "Jumat"] },
-  { "doctor_id": 3, "date": "2026-06-12", "is_available": true, "is_leave": false, "is_full": false, "quota_total": 15, "quota_remaining": 15, "schedule": "14:00 - 17:00", "practice_days": ["Selasa", "Kamis", "Sabtu"] }
+  {
+    "doctor_id": 1,
+    "date": "2026-06-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 15,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-06-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": true,
+    "quota_total": 20,
+    "quota_remaining": 0,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-06-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 5,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 4,
+    "date": "2026-06-11",
+    "is_available": false,
+    "is_leave": true,
+    "is_full": false,
+    "quota_total": 0,
+    "quota_remaining": 0,
+    "schedule": "Cuti",
+    "practice_days": [
+      "Senin",
+      "Rabu"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-06-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 10,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-06-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 2,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-06-12",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-06-12",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-07-03",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-07-03",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 25,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-07-04",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-07-04",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-07-06",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-07-06",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 4,
+    "date": "2026-07-06",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "09:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-07-06",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 25,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-07-07",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-07-07",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-07-07",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-07-08",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 4,
+    "date": "2026-07-08",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "09:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-07-08",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 25,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-07-09",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-07-09",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-07-09",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-07-10",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-07-10",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 25,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-07-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-07-11",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-07-13",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-07-13",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 4,
+    "date": "2026-07-13",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "09:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-07-13",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 25,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-07-14",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-07-14",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-07-14",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 1,
+    "date": "2026-07-15",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "08:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 4,
+    "date": "2026-07-15",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "09:00 - 12:00",
+    "practice_days": [
+      "Senin",
+      "Rabu"
+    ]
+  },
+  {
+    "doctor_id": 5,
+    "date": "2026-07-15",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 25,
+    "quota_remaining": 25,
+    "schedule": "09:00 - 13:00",
+    "practice_days": [
+      "Senin",
+      "Rabu",
+      "Jumat"
+    ]
+  },
+  {
+    "doctor_id": 2,
+    "date": "2026-07-16",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "13:00 - 17:00",
+    "practice_days": [
+      "Senin",
+      "Selasa",
+      "Kamis"
+    ]
+  },
+  {
+    "doctor_id": 3,
+    "date": "2026-07-16",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 15,
+    "quota_remaining": 15,
+    "schedule": "14:00 - 17:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  },
+  {
+    "doctor_id": 6,
+    "date": "2026-07-16",
+    "is_available": true,
+    "is_leave": false,
+    "is_full": false,
+    "quota_total": 20,
+    "quota_remaining": 20,
+    "schedule": "10:00 - 14:00",
+    "practice_days": [
+      "Selasa",
+      "Kamis",
+      "Sabtu"
+    ]
+  }
 ]
