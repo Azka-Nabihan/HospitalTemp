@@ -4,6 +4,16 @@ const fs = require('fs');
 const path = require('path');
 
 const bookingsFilePath = path.join(__dirname, '../data/bookings.json');
+const doctorsFilePath = path.join(__dirname, '../data/doctors.json');
+const polyclinicsFilePath = path.join(__dirname, '../data/polyclinics.json');
+
+function readDoctors() {
+    return JSON.parse(fs.readFileSync(doctorsFilePath, 'utf-8'));
+}
+
+function readPolyclinics() {
+    return JSON.parse(fs.readFileSync(polyclinicsFilePath, 'utf-8'));
+}
 
 // Helper: Read bookings from JSON file
 function readBookings() {
@@ -40,9 +50,21 @@ router.get('/verify', (req, res) => {
     const booking = bookings.find(b => b.booking_code === booking_code);
 
     if (booking) {
+        const doctors = readDoctors();
+        const polyclinics = readPolyclinics();
+        const doctor = doctors.find(d => Number(d.id) === Number(booking.doctor_id));
+        const polyclinic = polyclinics.find(p => Number(p.id) === Number(booking.poly_id));
+
+        const enrichedBooking = {
+            ...booking,
+            poly_name: polyclinic ? polyclinic.name : null,
+            doctor_name: doctor ? doctor.name : null,
+            doctor_specialist: doctor ? doctor.specialist : null
+        };
+
         return res.json({
             found: true,
-            booking: booking
+            booking: enrichedBooking
         });
     }
 
